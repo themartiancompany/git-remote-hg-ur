@@ -366,12 +366,12 @@ jobs:
             pacman \
               -Ql \
               "fur"
-          /entrypoint.sh \
-            pkg \
-              install \
-                -y \
-                "coreutils" || \
-          true
+          # /entrypoint.sh \
+          #   pkg \
+          #     install \
+          #       -y \
+          #       "coreutils" || \
+          # true
           cat \
             "/entrypoint.sh"
           export \
