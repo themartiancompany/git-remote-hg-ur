@@ -117,6 +117,11 @@ makedepends=(
   "mercurial"
   "${_py}"
 )
+if [[ "${_os}" == "Msys" ]]; then
+  makedepends+=(
+    "${_py}-pip"
+  )
+fi
 if [[ "${_git}" == "true" ]]; then
   makedepends+=(
     "git"
@@ -208,6 +213,11 @@ validpgpkeys=(
 build() {
   cd \
     "${_tarname}"
+  if [[ "${_os}" == "Msys" ]]; then
+    pip \
+      install \
+      "mercurial"
+  fi
   make \
     all \
     doc
