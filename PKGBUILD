@@ -89,7 +89,7 @@ pkgver=1.0.5
 _pkgver="v${pkgver}"
 _commit="16b33919e44483d1267bd2e51218a75ff1b61139"
 _bundle_commit="88b2756e4383032f2d31746245c56bd69a3e861b"
-pkgrel=4
+pkgrel=5
 _pkgdesc=(
   "Bidirectional bridge between"
   "Git and Mercurial."
