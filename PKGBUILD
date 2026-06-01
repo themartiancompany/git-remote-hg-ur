@@ -80,6 +80,7 @@ if [[ ! -v "_archive_format" ]]; then
     fi
   fi
 fi
+_py="python"
 _pkg=git-remote-hg
 pkgbase="${_pkg}"
 pkgname=(
@@ -89,7 +90,7 @@ pkgver=1.0.5
 _pkgver="v${pkgver}"
 _commit="16b33919e44483d1267bd2e51218a75ff1b61139"
 _bundle_commit="88b2756e4383032f2d31746245c56bd69a3e861b"
-pkgrel=5
+pkgrel=6
 _pkgdesc=(
   "Bidirectional bridge between"
   "Git and Mercurial."
@@ -114,6 +115,7 @@ makedepends=(
   'asciidoctor'
   "make"
   "mercurial"
+  "${_py}"
 )
 if [[ "${_git}" == "true" ]]; then
   makedepends+=(
